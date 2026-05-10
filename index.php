@@ -23,10 +23,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pesanan</a>
+                        <a class="nav-link" href="pemesanan.php">Pesanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Status</a>
+                        <a class="nav-link" href="embayaran.php">Pembayaran</a>
                     </li>
                 </ul>
             </div>
@@ -36,71 +36,129 @@
 
 
     <!-- content -->
-    <main>
-        <h1 class="sub">Menu</h1>
-        <div class="row row-cols-3 row-cols-md-5 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte Coffe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte Coffe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte Coffe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">  
-                    <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte Coffe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">  
-                    <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte Coffe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">  
-                    <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte Coffe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
-                    </div>
+<main class="container">
+
+    <h1 class="sub">Menu</h1>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- LATTE -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Latte Coffee">
+
+                <div class="card-body">
+                    <h5 class="card-title">Latte Coffee</h5>
+
+                    <p class="card-text">
+                        Kopi latte creamy dengan rasa lembut dan hangat.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Tambahkan
+                    </a>
                 </div>
             </div>
         </div>
-    </main>
+
+        <!-- CAPPUCCINO -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Cappuccino">
+
+                <div class="card-body">
+                    <h5 class="card-title">Cappuccino</h5>
+
+                    <p class="card-text">
+                        Cappuccino dengan foam susu tebal dan aroma kopi kuat.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Tambahkan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESPRESSO -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Espresso">
+
+                <div class="card-body">
+                    <h5 class="card-title">Espresso</h5>
+
+                    <p class="card-text">
+                        Espresso hitam pekat dengan cita rasa kopi asli.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Tambahkan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AMERICANO -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Americano">
+
+                <div class="card-body">
+                    <h5 class="card-title">Americano</h5>
+
+                    <p class="card-text">
+                        Kopi americano ringan dengan rasa pahit seimbang.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Tambahkan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOCHA -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Mocha">
+
+                <div class="card-body">
+                    <h5 class="card-title">Mocha</h5>
+
+                    <p class="card-text">
+                        Perpaduan kopi dan coklat dengan rasa manis nikmat.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Tambahkan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MATCHA -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Matcha Latte">
+
+                <div class="card-body">
+                    <h5 class="card-title">Matcha Latte</h5>
+
+                    <p class="card-text">
+                        Minuman matcha creamy dengan rasa teh hijau khas Jepang.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Tambahkan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
     <!-- content end-->
 
 
