@@ -52,6 +52,11 @@
                             Pembayaran
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="status.php">
+                            Status
+                        </a>
+                    </li>
 
                 </ul>
 

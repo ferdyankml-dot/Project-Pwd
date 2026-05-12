@@ -52,7 +52,11 @@
                             Pembayaran
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="status.php">
+                            Status
+                        </a>
+                    </li>
                 </ul>
 
             </div>
@@ -75,7 +79,7 @@
 
             <div class="card shadow border-0 rounded-4 h-100">
 
-                <img src="asset/img_FuVZ92o.jpg"
+                <img src="asset/Latte Coffe.jpg"
                     class="card-img-top"
                     style="height:180px; object-fit:cover;">
 
@@ -124,7 +128,7 @@
 
             <div class="card shadow border-0 rounded-4 h-100">
 
-                <img src="asset/img_FuVZ92o.jpg"
+                <img src="asset/Cappuccino.jpg"
                     class="card-img-top"
                     style="height:180px; object-fit:cover;">
 
@@ -173,7 +177,7 @@
 
             <div class="card shadow border-0 rounded-4 h-100">
 
-                <img src="asset/img_FuVZ92o.jpg"
+                <img src="asset/Espresso.jpg"
                     class="card-img-top"
                     style="height:180px; object-fit:cover;">
 
@@ -222,7 +226,7 @@
 
             <div class="card shadow border-0 rounded-4 h-100">
 
-                <img src="asset/img_FuVZ92o.jpg"
+                <img src="asset/Americano.jpg"
                     class="card-img-top"
                     style="height:180px; object-fit:cover;">
 
@@ -271,7 +275,7 @@
 
             <div class="card shadow border-0 rounded-4 h-100">
 
-                <img src="asset/img_FuVZ92o.jpg"
+                <img src="asset/Mocha.jpg"
                     class="card-img-top"
                     style="height:180px; object-fit:cover;">
 
@@ -320,7 +324,7 @@
 
             <div class="card shadow border-0 rounded-4 h-100">
 
-                <img src="asset/img_FuVZ92o.jpg"
+                <img src="asset/Matcha Latte.jpg"
                     class="card-img-top"
                     style="height:180px; object-fit:cover;">
 

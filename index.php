@@ -26,8 +26,10 @@
                         <a class="nav-link" href="pemesanan.php">Pesanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="embayaran.php">Pembayaran</a>
+                        <a class="nav-link" href="pembayaran.php">Pembayaran</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="status.php">Status</a>
                 </ul>
             </div>
         </div>
@@ -45,7 +47,7 @@
         <!-- LATTE -->
         <div class="col-md-4">
             <div class="card">
-                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Latte Coffee">
+                <img src="asset/Latte Coffe.jpg" class="card-img-top" alt="Latte Coffee">
 
                 <div class="card-body">
                     <h5 class="card-title">Latte Coffee</h5>
@@ -64,7 +66,7 @@
         <!-- CAPPUCCINO -->
         <div class="col-md-4">
             <div class="card">
-                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Cappuccino">
+                <img src="asset/Cappuccino.jpg" class="card-img-top" alt="Cappuccino">
 
                 <div class="card-body">
                     <h5 class="card-title">Cappuccino</h5>
@@ -83,7 +85,7 @@
         <!-- ESPRESSO -->
         <div class="col-md-4">
             <div class="card">
-                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Espresso">
+                <img src="asset/Espresso.jpg" class="card-img-top" alt="Espresso">
 
                 <div class="card-body">
                     <h5 class="card-title">Espresso</h5>
@@ -102,7 +104,7 @@
         <!-- AMERICANO -->
         <div class="col-md-4">
             <div class="card">
-                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Americano">
+                <img src="asset/Americano.jpg" class="card-img-top" alt="Americano">
 
                 <div class="card-body">
                     <h5 class="card-title">Americano</h5>
@@ -121,7 +123,7 @@
         <!-- MOCHA -->
         <div class="col-md-4">
             <div class="card">
-                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Mocha">
+                <img src="asset/Mocha.jpg" class="card-img-top" alt="Mocha">
 
                 <div class="card-body">
                     <h5 class="card-title">Mocha</h5>
@@ -140,7 +142,7 @@
         <!-- MATCHA -->
         <div class="col-md-4">
             <div class="card">
-                <img src="asset/img_FuVZ92o.jpg" class="card-img-top" alt="Matcha Latte">
+                <img src="asset/Matcha Latte.jpg" class="card-img-top" alt="Matcha Latte">
 
                 <div class="card-body">
                     <h5 class="card-title">Matcha Latte</h5>
