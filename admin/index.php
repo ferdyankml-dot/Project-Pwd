@@ -19,22 +19,17 @@
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-custom">
-
         <div class="container-fluid">
-
-            <a class="navbar-brand text-white" href="#">
-                <i class="bi bi-cup-hot-fill"></i>
-                Coffee
-            </a>
-
             <span class="text-white">
                 ADMIN DASHBOARD
             </span>
-
+            <a href="logout.php" class="navbar-brand text-white">
+                <i class="bi bi-box-arrow-right"></i>
+                Logout
+            </a>
         </div>
-
     </nav>
-
+    
     <div class="container">
 
         <div class="row">
