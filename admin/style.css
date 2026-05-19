@@ -45,3 +45,26 @@ body{
 .price{
     font-weight: bold;
 }
+/* css login */
+.login{
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.sub{
+    text-align: center;
+}
+form{
+    background-color: #ffffff;
+    height: 400px;
+    width: 650px;
+    padding: 40px;
+    border-radius: 30px;
+}
+button {
+    width: 100%;      
+    padding: 10px;    
+}
+/* css login end*/
