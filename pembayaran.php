@@ -1,233 +1,95 @@
+<?php
+// Menangkap data input nama dari formulir halaman pemesanan.php menggunakan POST
+$nama   = isset($_POST['nama_pemesan']) ? $_POST['nama_pemesan'] : "Pelanggan";
+// Menangkap data teks nama menu kopi yang dipilih dari dropdown via POST
+$menu   = isset($_POST['menu_kopi']) ? $_POST['menu_kopi'] : "";
+// Menangkap nilai kuantitas/jumlah gelas pembelian bertipe angka via POST
+$jumlah = isset($_POST['jumlah']) ? $_POST['jumlah'] : 1;
+// Menangkap teks tulisan catatan opsional dari pembeli lewat POST
+$catatan= isset($_POST['catatan']) ? $_POST['catatan'] : "";
+
+// Membuat variabel penampung awal untuk nilai harga satu gelas kopi
+$harga_satuan = 0;
+
+// Menentukan nominal harga berdasarkan 6 nama menu menggunakan logika percabangan IF-ELSE
+if ($menu == "Latte Coffee") {
+    $harga_satuan = 25000; // Mengisi variabel harga jika teks yang cocok adalah Latte Coffee
+} else if ($menu == "Cappuccino") {
+    $harga_satuan = 28000; // Mengisi variabel harga jika teks yang cocok adalah Cappuccino
+} else if ($menu == "Espresso") {
+    $harga_satuan = 20000; // Mengisi variabel harga jika teks yang cocok adalah Espresso
+} else if ($menu == "Americano") {
+    $harga_satuan = 22000; // Mengisi variabel harga jika teks yang cocok adalah Americano
+} else if ($menu == "Macchiato") {
+    $harga_satuan = 27000; // Mengisi variabel harga jika teks yang cocok adalah Macchiato
+} else if ($menu == "Mocha") {
+    $harga_satuan = 30000; // Mengisi variabel harga jika teks yang cocok adalah Mocha
+} else {
+    $harga_satuan = 0; // Nilai default jika tidak ada menu yang cocok
+}
+
+// Menghitung jumlah tagihan akhir menggunakan rumus matematika perkalian (Aritmatika)
+$total_bayar = $harga_satuan * $jumlah;
+?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pembayaran</title>
-
+    <title>PesanKuy - Pembayaran</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-
         <div class="container-fluid">
-
-            <a class="navbar-brand" href="index.php">
-                PesanKuy
-            </a>
-
-            <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <ul class="navbar-nav">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            Menu
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="pemesanan.php">
-                            Pesanan
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pembayaran.php">
-                            Pembayaran
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="status.php">
-                            Status
-                        </a>
-                    </li>
-
+            <a class="navbar-brand" href="#">PesanKuy</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Menu</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="pemesanan.php">Pesanan</a></li> 
+                    <li class="nav-item"><a class="nav-link active" href="pembayaran.php">Pembayaran</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="status.php">Status</a></li> 
                 </ul>
-
             </div>
-
         </div>
-
     </nav>
-    <!-- NAVBAR END -->
 
+    <main class="container my-5" style="max-width: 600px;">
+        <div class="card p-4 shadow-sm border-primary"> 
+            <h2 class="mb-4 text-center text-primary">Konfirmasi Pembayaran</h2>
+            
+            <table class="table table-bordered bg-white">
+                <tr><th>Nama Pemesan</th><td><?php echo $nama; ?></td></tr> 
+                <tr><th>Item Kopi</th><td><?php echo $menu; ?></td></tr> 
+                <tr><th>Harga Satuan</th><td>Rp <?php echo number_format($harga_satuan); ?></td></tr> 
+                <tr><th>Jumlah Qty</th><td><?php echo $jumlah; ?> Gelas</td></tr> 
+                <tr><th>Catatan</th><td><?php echo empty($catatan) ? "-" : $catatan; ?></td></tr> 
+                <tr class="table-warning"> 
+                    <th>Total Bayar</th>
+                    <th><strong>Rp <?php echo number_format($total_bayar); ?></strong></th> 
+                </tr>
+            </table>
 
-    <!-- PEMBAYARAN -->
-    <main class="container mt-5 mb-5">
-
-        <h1 class="text-center fw-bold mb-5">
-            Konfirmasi Pembayaran
-        </h1>
-
-        <div class="row justify-content-center">
-
-            <div class="col-lg-8">
-
-                <!-- DETAIL -->
-                <div class="card border-0 shadow rounded-4 p-4 mb-4">
-
-                    <h3 class="fw-bold mb-4">
-    Detail Pembayaran
-</h3>
-
-<div class="d-flex justify-content-between mb-3">
-    <h5>Latte Coffee</h5>
-    <h5>Rp25.000</h5>
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-    <h5>Cappuccino</h5>
-    <h5>Rp30.000</h5>
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-    <h5>Espresso</h5>
-    <h5>Rp20.000</h5>
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-    <h5>Americano</h5>
-    <h5>Rp22.000</h5>
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-    <h5>Mocha</h5>
-    <h5>Rp28.000</h5>
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-    <h5>Matcha Latte</h5>
-    <h5>Rp27.000</h5>
-</div>
-
-<hr>
-
-<div class="d-flex justify-content-between mb-3">
-
-    <h5>Total Pesanan</h5>
-
-    <h5 class="text-success fw-bold">
-        Rp177.000
-    </h5>
-
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-
-    <h5>Atas Nama</h5>
-
-    <h5>
-        PesanKuy Cafe
-    </h5>
-
-</div>
-
-<div class="d-flex justify-content-between mb-3">
-
-    <h5>Bank Tujuan</h5>
-
-    <h5>
-        BCA
-    </h5>
-
-</div>
-
-<div class="d-flex justify-content-between">
-
-    <h5>No Rekening</h5>
-
-    <h5 class="fw-bold">
-        1234567890
-    </h5>
-
-</div>
-
-                <!-- FORM -->
-                <div class="card border-0 shadow rounded-4 p-4">
-
-                    <h3 class="fw-bold mb-4">
-                        Upload Bukti Transfer
-                    </h3>
-
-                    <div class="mb-4">
-
-                        <label class="form-label fw-bold">
-                            Nama Pemesan
-                        </label>
-
-                        <input type="text"
-                            class="form-control p-3"
-                            placeholder="Masukkan Nama">
-
-                    </div>
-
-                    <div class="mb-4">
-
-                        <label class="form-label fw-bold">
-                            Upload Bukti Transfer
-                        </label>
-
-                        <input type="file"
-                            class="form-control p-3">
-
-                    </div>
-
-                    <button class="btn btn-success w-100 py-3 rounded-4 fw-bold shadow mb-3">
-
-                        Konfirmasi Pembayaran
-
-                    </button>
-
-                    <a href="status.php"
-                        class="btn btn-dark w-100 py-3 rounded-4 fw-bold shadow">
-
-                        Lihat Status Pesanan
-
-                    </a>
-
+            <form action="status.php" method="POST">
+                <input type="hidden" name="nama" value="<?php echo $nama; ?>"> 
+                <input type="hidden" name="menu" value="<?php echo $menu; ?>"> 
+                <input type="hidden" name="total" value="<?php echo $total_bayar; ?>"> 
+                
+                <div class="mb-3">
+                    <label class="form-label">Pilih Metode Pembayaran</label>
+                    <select name="metode" class="form-select" required>
+                        <option value="Tunai / Kasir">Tunai di Kasir</option>
+                        <option value="Transfer Bank">Transfer Bank (VA)</option>
+                        <option value="E-Wallet">E-Wallet (QRIS)</option>
+                    </select>
                 </div>
 
-            </div>
-
+                <button type="submit" class="btn btn-primary w-100">Konfirmasi & Bayar Sekarang</button>
+            </form>
         </div>
-
     </main>
-    <!-- PEMBAYARAN END -->
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="fot">
-
-            <p>
-                Pesanan Menjadi lebih Mudah, PesanKuy@2026
-            </p>
-
-        </div>
-
-    </footer>
-    <!-- FOOTER END -->
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

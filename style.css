@@ -1,168 +1,30 @@
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+/* Mengatur font dasar dan warna latar belakang seluruh halaman web */
+body {
+    font-family: 'Arial', sans-serif; /* Mengubah jenis huruf teks menjadi Arial agar bersih */
+    background-color: #f8f9fa; /* Mewarnai latar belakang website menjadi abu-abu cerah */
 }
 
-main{
-    flex: 1;
-    padding: 2rem;
+/* Mengatur properti kotak pembungkus produk secara statis */
+.card {
+    border: 1px solid #e3e6f0; /* Memberikan garis tepi tipis berwarna abu-abu pada kotak menu */
+    transition: none !important; /* Mematikan semua bentuk efek animasi gerakan bawaan browser */
 }
 
-.sub{
-    margin-bottom: 20px;
-    text-align: center;
+/* Mengatur letak komponen gambar di dalam kotak menu */
+.card-img-top {
+    height: 200px; /* Mengunci tinggi gambar agar seragam satu sama lain */
+    object-fit: cover; /* Memotong gambar secara proporsional agar tidak terlihat gepeng atau melar */
 }
 
-/* BAGIAN CONTAINER BIAR NYAMPING */
-.contain{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Mengunci posisi kotak informasi kaki halaman (Footer) */
+footer {
+    position: fixed; /* Membuat posisi kaki halaman menetap di tempat saat layar di-scroll */
+    bottom: 0; /* Menempelkan posisi footer tepat di batas paling bawah layar */
+    width: 100%; /* Mengatur lebar kotak footer agar penuh memenuhi layar dari kiri ke kanan */
+    z-index: 1000; /* Mengatur urutan tumpukan agar posisi footer selalu berada di lapisan paling depan */
 }
 
-.card{
-    height: 100%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* Memberikan ruang pembatas pada bagian bawah konten utama website */
+main {
+    margin-bottom: 90px; /* Memberikan jarak kosong di bawah agar teks konten tidak tertutup oleh footer */
 }
-
-.card-img-top{
-    height: 200px;
-    object-fit: cover;
-}
-
-footer{
-    display: flex;
-    width: 100%;
-    height: 5rem;
-    background-color: black;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-/* SMOOTH SCROLL */
-html{
-    scroll-behavior: smooth;
-}
-
-/* NAVBAR */
-.navbar{
-    padding: 15px 25px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-.navbar-brand{
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.nav-link{
-    transition: 0.3s;
-    margin-left: 10px;
-}
-
-.nav-link:hover{
-    color: #ffc107 !important;
-}
-
-/* TITLE */
-h1{
-    color: #212529;
-    letter-spacing: 1px;
-}
-
-/* CARD */
-.card{
-    transition: 0.3s ease;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: white;
-}
-
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* IMAGE */
-.card-img-top{
-    transition: 0.3s;
-}
-
-.card:hover .card-img-top{
-    transform: scale(1.03);
-}
-
-/* BUTTON */
-.btn{
-    transition: 0.3s;
-    border-radius: 12px;
-}
-
-.btn:hover{
-    transform: scale(1.03);
-}
-
-/* FORM */
-.form-control{
-    border-radius: 12px;
-}
-
-.form-control:focus{
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    border-color: #198754;
-}
-
-/* FOOTER */
-footer{
-    margin-top: auto;
-    letter-spacing: 1px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-    h1{
-        font-size: 28px;
-    }
-
-    .navbar-brand{
-        font-size: 22px;
-    }
-
-}
-
-/* CARD PRICE */
-.text-primary{
-    font-size: 20px;
-}
-
-/* QUANTITY BUTTON */
-.btn-sm{
-    width: 35px;
-    height: 35px;
-    border-radius: 10px;
-}
-
-/* TOTAL CARD */
-.text-success{
-    letter-spacing: 1px;
-}
-
-/* BUTTON PESANAN */
-.btn-danger,
-.btn-success{
-    transition: 0.3s;
-}
-
-.btn-danger:hover,
-.btn-success:hover{
-    transform: translateY(-3px);
-}
-
