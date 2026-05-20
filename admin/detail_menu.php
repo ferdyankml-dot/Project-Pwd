@@ -1,3 +1,35 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['login'])){
+
+    header("Location: login.php");
+    exit;
+
+}
+require_once __DIR__ . '/koneksi.php';
+
+if (!isset($_GET['id'])) {
+
+    echo "ID tidak ditemukan";
+    exit;
+
+}
+
+$id = $_GET['id'];
+
+$data = mysqli_query($konek, "SELECT * FROM menu WHERE idm = '$id'");
+
+$row = mysqli_fetch_assoc($data);
+
+if (!$row) {
+
+    echo "Data tidak ditemukan";
+    exit;
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -20,24 +52,33 @@
         </h2>
 
         <h5>ID Menu</h5>
-        <p>01</p>
+
+        <p>
+            <?= $row['idm']; ?>
+        </p>
 
         <hr>
 
         <h5>Nama Menu</h5>
-        <p>Amerikano</p>
+
+        <p>
+            <?= $row['catalog']; ?>
+        </p>
 
         <hr>
 
         <h5>Harga Menu</h5>
-        <p>Rp 25.000</p>
+
+        <p>
+            Rp <?= number_format($row['harga']); ?>
+        </p>
 
         <hr>
 
         <h5>Keterangan</h5>
 
         <p>
-            Kopi hitam tanpa susu dengan rasa kuat.
+            <?= $row['keterangan']; ?>
         </p>
 
         <a 

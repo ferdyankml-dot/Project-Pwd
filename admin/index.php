@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['login'])){
+
+    header("Location: login.php");
+    exit;
+
+}
+require_once __DIR__ . '/koneksi.php';
+
+$menu = mysqli_query($konek, "SELECT * FROM menu");
+?>
 <!DOCTYPE html>
 <html lang="id">
 
@@ -29,7 +42,7 @@
             </a>
         </div>
     </nav>
-    
+
     <div class="container">
 
         <div class="row">
@@ -50,45 +63,56 @@
                     </div>
 
                     <!-- ITEM -->
-                    <div class="row catalog-item align-items-center">
+                    <?php while ($row = mysqli_fetch_assoc($menu)) { ?>
 
-                        <div class="col-md-8">
+                        <!-- ITEM -->
+                        <div class="row catalog-item align-items-center">
 
-                            <h5>KODE 01</h5>
+                            <div class="col-md-8">
 
-                            <p>AMERIKANO</p>
+                                <h5>
+                                    KODE <?= $row['idm']; ?>
+                                </h5>
 
-                            <p class="price">
-                                Rp 25.000
-                            </p>
+                                <p>
+                                    <?= strtoupper($row['catalog']); ?>
+                                </p>
+
+                                <p class="price">
+                                    Rp <?= number_format($row['harga']); ?>
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-4 action-btns">
+                                <a
+                                    href="detail_menu.php?id=<?= $row['idm']; ?>"
+                                    class="btn btn-dark btn-sm">
+
+                                    Detail
+
+                                </a>
+                                <a
+                                    href="edit_menu.php?id=<?= $row['idm']; ?>"
+                                    class="btn btn-outline-dark btn-sm">
+
+                                    Edit
+
+                                </a>
+                                <a
+                                    href="hapus_menu.php?id=<?= $row['idm']; ?>"
+                                    class="btn btn-outline-dark btn-sm"
+                                    onclick="return confirm('Yakin ingin menghapus data?')">
+
+                                    Delete
+
+                                </a>
+
+                            </div>
 
                         </div>
 
-                        <div class="col-md-4 action-btns">
-
-                            <a
-                                href="edit_menu.php"
-                                class="btn btn-outline-dark btn-sm">
-
-                                Edit
-
-                            </a>
-
-                            <button class="btn btn-outline-dark btn-sm">
-                                Delete
-                            </button>
-
-                            <a
-                                href="detail_menu.php"
-                                class="btn btn-dark btn-sm">
-
-                                Detail
-
-                            </a>
-
-                        </div>
-
-                    </div>
+                    <?php } ?>
 
                 </div>
 
