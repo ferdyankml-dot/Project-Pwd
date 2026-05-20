@@ -1,69 +1,73 @@
-body{
+body {
     background-color: #f4f5f7;
     font-family: Arial, sans-serif;
 }
 
-.navbar-custom{
+.navbar-custom {
     background-color: #2f3640;
     padding: 18px 40px;
 }
 
-.box{
+.box {
     background: rgb(255, 255, 255);
     border-radius: 15px;
     padding: 20px;
     margin-top: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .catalog-item,
-.order-item{
+.order-item {
     background-color: #fafafa;
     border-radius: 12px;
     padding: 15px;
     margin-bottom: 15px;
 }
 
-.menu-title{
+.menu-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-add{
+.btn-add {
     width: 55px;
     height: 55px;
     border-radius: 50%;
 }
 
 .action-btns button,
-.action-btns a{
+.action-btns a {
     width: 100%;
     margin-bottom: 5px;
 }
 
-.price{
+.price {
     font-weight: bold;
 }
+
 /* css login */
-.login{
+.login {
     background-color: #2f3640;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-.sub{
+
+.sub {
     text-align: center;
 }
-form{
+
+form {
     background-color: #ffffff;
     height: 450px;
     width: 100%;
     padding: 40px;
     border-radius: 30px;
 }
-.login form{
+
+.login form {
     background-color: #ffffff;
     height: 450px;
     width: 600px;
@@ -71,8 +75,31 @@ form{
     border-radius: 30px;
 }
 
-button {
-    width: 100%;      
-    padding: 10px;    
-}
-/* css login end*/
+.checkout-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .menu-item {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .rekening-card {
+            background-color: #2f3640;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .btn-custom {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+

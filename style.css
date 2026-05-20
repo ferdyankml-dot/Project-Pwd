@@ -1,30 +1,77 @@
 /* Mengatur font dasar dan warna latar belakang seluruh halaman web */
 body {
-    font-family: 'Arial', sans-serif; /* Mengubah jenis huruf teks menjadi Arial agar bersih */
-    background-color: #f8f9fa; /* Mewarnai latar belakang website menjadi abu-abu cerah */
+    font-family: 'Arial', sans-serif;
+    /* Mengubah jenis huruf teks menjadi Arial agar bersih */
+    background-color: #f8f9fa;
+    /* Mewarnai latar belakang website menjadi abu-abu cerah */
 }
 
 /* Mengatur properti kotak pembungkus produk secara statis */
 .card {
-    border: 1px solid #e3e6f0; /* Memberikan garis tepi tipis berwarna abu-abu pada kotak menu */
-    transition: none !important; /* Mematikan semua bentuk efek animasi gerakan bawaan browser */
+    border: 1px solid #e3e6f0;
+    /* Memberikan garis tepi tipis berwarna abu-abu pada kotak menu */
+    transition: none !important;
+    /* Mematikan semua bentuk efek animasi gerakan bawaan browser */
 }
 
 /* Mengatur letak komponen gambar di dalam kotak menu */
 .card-img-top {
-    height: 200px; /* Mengunci tinggi gambar agar seragam satu sama lain */
-    object-fit: cover; /* Memotong gambar secara proporsional agar tidak terlihat gepeng atau melar */
+    height: 200px;
+    /* Mengunci tinggi gambar agar seragam satu sama lain */
+    object-fit: cover;
+    /* Memotong gambar secara proporsional agar tidak terlihat gepeng atau melar */
 }
 
 /* Mengunci posisi kotak informasi kaki halaman (Footer) */
 footer {
-    position: fixed; /* Membuat posisi kaki halaman menetap di tempat saat layar di-scroll */
-    bottom: 0; /* Menempelkan posisi footer tepat di batas paling bawah layar */
-    width: 100%; /* Mengatur lebar kotak footer agar penuh memenuhi layar dari kiri ke kanan */
-    z-index: 1000; /* Mengatur urutan tumpukan agar posisi footer selalu berada di lapisan paling depan */
+    position: fixed;
+    /* Membuat posisi kaki halaman menetap di tempat saat layar di-scroll */
+    bottom: 0;
+    /* Menempelkan posisi footer tepat di batas paling bawah layar */
+    width: 100%;
+    /* Mengatur lebar kotak footer agar penuh memenuhi layar dari kiri ke kanan */
+    z-index: 1000;
+    /* Mengatur urutan tumpukan agar posisi footer selalu berada di lapisan paling depan */
 }
 
 /* Memberikan ruang pembatas pada bagian bawah konten utama website */
 main {
-    margin-bottom: 90px; /* Memberikan jarak kosong di bawah agar teks konten tidak tertutup oleh footer */
+    margin-bottom: 90px;
+    /* Memberikan jarak kosong di bawah agar teks konten tidak tertutup oleh footer */
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    bottom: 40px;
+}
+
+.carousel {
+    margin-top: 30px;
+}
+
+
+.menu-card {
+    border-radius: 15px;
+    padding: 20px;
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-plus {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    border: none;
+    background: black;
+    color: white;
 }
