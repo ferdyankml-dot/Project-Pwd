@@ -60,17 +60,17 @@
 
 
 
-                <button class="btn btn-dark" name="simpan">
-                    Simpan
-                </button>
+                <div class="mt-4 d-flex gap-2 align-items-center">
 
-                <a
-                    href="index.php"
-                    class="btn btn-outline-dark mt-4">
+                    <button type="submit" class="btn btn-dark" name="simpan">
+                        Simpan
+                    </button>
 
-                    Kembali
+                    <a href="index.php" class="btn btn-outline-dark">
+                        Kembali
+                    </a>
 
-                </a>
+                </div>
 
             </form>
         </div>

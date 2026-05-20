@@ -24,7 +24,7 @@ body {
 
 /* Mengunci posisi kotak informasi kaki halaman (Footer) */
 footer {
-    position: fixed;
+    /* position: fixed; */
     /* Membuat posisi kaki halaman menetap di tempat saat layar di-scroll */
     bottom: 0;
     /* Menempelkan posisi footer tepat di batas paling bawah layar */
