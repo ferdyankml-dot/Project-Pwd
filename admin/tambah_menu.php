@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,69 +10,73 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container mt-5">
+    <div class="container mt-5">
 
-    <div class="box">
+        <div class="box">
 
-        <h2 class="mb-4">
-            Tambah Menu
-        </h2>
+            <h2 class="mb-4">
+                Tambah Menu
+            </h2>
+            <form action="proses_tambah.php" method="POST">
+                <div class="mb-3">
 
-        <div class="mb-3">
+                    <label class="form-label">
+                        Nama Menu
+                    </label>
 
-            <label class="form-label">
-                Nama Menu
-            </label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="nama_menu">
+                </div>
 
-            <input 
-                type="text"
-                class="form-control"
-                value="Amerikano">
+                <div class="mb-3">
 
+                    <label class="form-label">
+                        Harga Menu
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="harga">
+
+                </div>
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        keterangan
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="keterangan">
+
+                </div>
+
+
+
+                <button class="btn btn-dark" name="simpan">
+                    Simpan
+                </button>
+
+                <a
+                    href="index.php"
+                    class="btn btn-outline-dark mt-4">
+
+                    Kembali
+
+                </a>
+
+            </form>
         </div>
-
-        <div class="mb-3">
-
-            <label class="form-label">
-                Harga Menu
-            </label>
-
-            <input 
-                type="text"
-                class="form-control"
-                value="25000">
-
-        </div>
-
-        <div class="mb-3">
-
-            <label class="form-label">
-                Keterangan
-            </label>
-
-            <textarea 
-                class="form-control"
-                rows="3">Kopi hitam tanpa susu dengan rasa kuat.</textarea>
-
-        </div>
-
-        <button class="btn btn-dark">
-            Simpan
-        </button>
-
-        <a 
-            href="index.php"
-            class="btn btn-outline-dark">
-
-            Kembali
-
-        </a>
 
     </div>
 
-</div>
-
 </body>
+
 </html>

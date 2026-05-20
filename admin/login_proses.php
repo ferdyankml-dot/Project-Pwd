@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once __DIR__ . '/koneksi.php';
 
 if (isset($_POST['submit'])) {
@@ -15,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     if ($cek > 0) {
 
-        $_SESSION['submit'] = true;
+        $_SESSION['login'] = true;
         $_SESSION['username'] = $username;
 
         header("Location: index.php");
