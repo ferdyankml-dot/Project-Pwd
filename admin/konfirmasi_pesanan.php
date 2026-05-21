@@ -13,19 +13,17 @@ require_once __DIR__ . '/koneksi.php';
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id_pesanan = mysqli_real_escape_string($konek, $_GET['id']);
 
-    // PROSES KONFIRMASI: Mengubah status menjadi 'Selesai'
+    // Update status pesanan
     $query_pesanan = "UPDATE pemesanan SET status = 'Selesai' WHERE id = '$id_pesanan'";
 
     if (mysqli_query($konek, $query_pesanan)) {
-        echo "<script>
-                alert('Pesanan Berhasil Dikonfirmasi dan Dinyatakan Selesai!');
-                window.location.href = 'index.php';
-              </script>";
+        $_SESSION['notif_sukses'] = "Pesanan Berhasil Dikonfirmasi dan Dinyatakan Selesai!";
+        header("Location: index.php");
+        exit;
     } else {
         echo "Gagal memproses konfirmasi: " . mysqli_error($konek);
     }
 } else {
-    // Jika tidak ada ID di URL, kembalikan ke dashboard
     header("Location: index.php");
     exit;
 }

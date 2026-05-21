@@ -56,7 +56,9 @@ $result = mysqli_query($konek, $query);
                     </div>
                 </div>
             </div>
-        </div> <h1 class="text-center mt-5 mb-4">Daftar Menu</h1>
+        </div>
+
+        <h1 class="text-center mt-5 mb-4">Daftar Menu</h1>
         
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <?php

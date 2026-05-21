@@ -12,69 +12,32 @@
 </head>
 
 <body>
-
     <div class="container mt-5">
-
         <div class="box">
-
-            <h2 class="mb-4">
-                Tambah Menu
-            </h2>
+            <h2 class="mb-4">Tambah Menu</h2>
             <form action="proses_tambah.php" method="POST">
                 <div class="mb-3">
-
-                    <label class="form-label">
-                        Nama Menu
-                    </label>
-
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="nama_menu">
+                    <label class="form-label">Nama Menu</label>
+                    <input type="text" class="form-control" name="nama_menu">
                 </div>
 
                 <div class="mb-3">
-
-                    <label class="form-label">
-                        Harga Menu
-                    </label>
-
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="harga">
-
+                    <label class="form-label">Harga Menu</label>
+                    <input type="text" class="form-control" name="harga">
                 </div>
+
                 <div class="mb-3">
-
-                    <label class="form-label">
-                        keterangan
-                    </label>
-
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="keterangan">
-
+                    <label class="form-label">Keterangan</label>
+                    <input type="text" class="form-control" name="keterangan">
                 </div>
-
-
 
                 <div class="mt-4 d-flex gap-2 align-items-center">
-
-                    <button type="submit" class="btn btn-dark" name="simpan">
-                        Simpan
-                    </button>
-
-                    <a href="index.php" class="btn btn-outline-dark">
-                        Kembali
-                    </a>
-
+                    <button type="submit" class="btn btn-dark" name="simpan">Simpan</button>
+                    <a href="index.php" class="btn btn-outline-dark">Kembali</a>
                 </div>
 
             </form>
         </div>
-
     </div>
 
 </body>

@@ -17,7 +17,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 
 $id_pesanan = mysqli_real_escape_string($konek, $_GET['id']);
 
-// Query JOIN untuk mengambil data pemesanan, nama menu, dan bukti pembayaran sekaligus
+// Query JOIN untuk mengambil data pemesanan
 $query = "SELECT pemesanan.*, menu.catalog, menu.harga, pembayaran.total AS total_bayar, pembayaran.bukti 
           FROM pemesanan 
           LEFT JOIN menu ON pemesanan.idm = menu.idm 
@@ -46,14 +46,9 @@ if (!$data) {
 </head>
 
 <body>
-
     <div class="container mt-5 mb-5">
-
         <div class="box">
-
-            <h2 class="mb-4">
-                Detail Pesanan #<?= $data['id']; ?>
-            </h2>
+            <h2 class="mb-4">Detail Pesanan #<?= $data['id']; ?></h2>
 
             <h5>Atas Nama Pembeli</h5>
             <p><?= strtoupper($data['namap']); ?></p>
@@ -94,7 +89,7 @@ if (!$data) {
             <hr>
 
             <h5 class="mb-3">Bukti Pembayaran</h5>
-            
+
             <?php if (!empty($data['bukti'])) { ?>
                 <p class="text-success mb-2">
                     Pelanggan mengonfirmasi pembayaran sebesar: <strong>Rp <?= number_format($data['total_bayar'], 0, ',', '.'); ?></strong>

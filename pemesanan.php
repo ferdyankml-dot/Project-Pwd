@@ -13,26 +13,26 @@ $query_menu = mysqli_query($konek, "SELECT * FROM menu");
 <body>
 
     <nav class="navbar navbar-expand-lg bg-dark text-white p-3" data-bs-theme="dark">
-        <div class="container-fluid"><a class="navbar-brand" href="index.php">PesanKuy</a></div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">PesanKuy</a>
+        </div>
     </nav>
 
     <main class="container my-5" style="max-width: 600px;">
-        <div class="card p-4 shadow-sm"> 
+        <div class="card p-4 shadow-sm">
             <h2 class="mb-4 text-center">Form Pemesanan</h2>
-            
-            <form action="pembayaran.php" method="POST"> 
-                
+
+            <form action="pembayaran.php" method="POST">
                 <div class="mb-3">
                     <label class="form-label">Nama Pemesan</label>
                     <input type="text" name="namap" class="form-control" required placeholder="Masukkan nama Anda">
                 </div>
-                
+
                 <div class="mb-3">
                     <label class="form-label">Menu yang Dipilih</label>
                     <select name="idm" class="form-select" required>
                         <option value="" disabled selected>-- Pilih Menu Kopi --</option>
-                        <?php
-                        while($row = mysqli_fetch_assoc($query_menu)) {
+                        <?php while ($row = mysqli_fetch_assoc($query_menu)) {
                             echo "<option value='" . $row['idm'] . "'>" . htmlspecialchars($row['catalog']) . " - Rp " . number_format($row['harga'], 0, ',', '.') . "</option>";
                         }
                         ?>

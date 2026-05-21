@@ -1,32 +1,24 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['login'])){
-
+if (!isset($_SESSION['login'])) {
     header("Location: login.php");
     exit;
-
 }
 require_once __DIR__ . '/koneksi.php';
 
 if (!isset($_GET['id'])) {
-
     echo "ID tidak ditemukan";
     exit;
-
 }
 
 $id = $_GET['id'];
-
 $data = mysqli_query($konek, "SELECT * FROM menu WHERE idm = '$id'");
-
 $row = mysqli_fetch_assoc($data);
 
 if (!$row) {
-
     echo "Data tidak ditemukan";
     exit;
-
 }
 ?>
 
@@ -44,34 +36,21 @@ if (!$row) {
 <body>
 
 <div class="container mt-5">
-
     <div class="box">
-
-        <h2 class="mb-4">
-            Detail Menu
-        </h2>
+        <h2 class="mb-4">Detail Menu</h2>
 
         <h5>ID Menu</h5>
-
-        <p>
-            <?= $row['idm']; ?>
-        </p>
+        <p><?= $row['idm']; ?></p>
 
         <hr>
 
         <h5>Nama Menu</h5>
-
-        <p>
-            <?= $row['catalog']; ?>
-        </p>
+        <p><?= $row['catalog']; ?></p>
 
         <hr>
 
         <h5>Harga Menu</h5>
-
-        <p>
-            Rp <?= number_format($row['harga']); ?>
-        </p>
+        <p>Rp <?= number_format($row['harga']); ?></p>
 
         <hr>
 
@@ -81,13 +60,7 @@ if (!$row) {
             <?= $row['keterangan']; ?>
         </p>
 
-        <a 
-            href="index.php"
-            class="btn btn-dark">
-
-            Kembali
-
-        </a>
+        <a href="index.php" class="btn btn-dark">Kembali</a>
 
     </div>
 

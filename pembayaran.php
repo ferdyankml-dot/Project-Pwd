@@ -184,7 +184,8 @@ $total_bayar  = $harga_satuan * (int)$jumlah;
                                 </div>
                             </div>
 
-                        </form> </div>
+                        </form> 
+                    </div>
                 </div>
             </div>
         </div>
